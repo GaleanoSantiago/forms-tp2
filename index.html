@@ -81,10 +81,43 @@
 			font-style:uppercase;
 			background-color:#51829B;
 			color:white;
-			width:80%;
+			width:50%;
 			text-align:center;
+			padding:2px 0;
+			font-size:1.6rem;
 		}
-		
+		.container{
+			display:flex;
+			flex-direction:column;
+			align-items:center;
+			gap:20px;
+		}
+		.container p.subtitle{
+			width:50%;
+		}
+		.container-third-form{
+			display:flex;
+			flex-direction:column;
+			align-items:center;
+		}
+		.subForms{
+			width:700px;
+			border:2px solid #51829B;
+			border-radius:10px;
+			padding:15px 10px;
+		}
+		.btn-section{
+			width:700px;
+			display:flex;
+			justify-content:space-around;
+			padding:30px 0;
+		}
+		.btn-section .btn{
+			width: 80px;
+			border-radius:0;
+			border:1px solid #232323;
+			padding:3px 0;
+		}
       </style>
       
       
@@ -173,9 +206,34 @@
 				<input type="submit" >
 			</form>
 		</section>
-		<section>
-			<h2>Formulario 3</h2>
-			<h2 class="titulo-grande-blue">Formulario Solicitud de Citas</h2>
+		<section style="display:block;">
+			<div class="container">
+				<h2>Formulario 3</h2>
+				<h2 class="titulo-grande-blue">FORMULARIO SOLICITUD DE CITAS</h2>
+				<p class="subtitle">Para solicitar una cita llene el formulario que sigue a continuación. 
+				Los campos marcados con ** son necesarios para procesar correctamente 
+				la solicitud.</p>
+				<div class="container-third-form">
+					<form>
+						<div class="subForms">
+							<h4>Datos del Paciente:</h4>
+						</div>
+						<p style="text-align:center; margin:5px 0;"><span style="font-weight:bold;">Importante: </span> Sirvase 
+						verificar la dirección de correo electrónico ingresado, para un 
+						correcto envío de su cita.</p>
+						<div class="subForms">
+							<h4>Datos de la Cita:</h4>
+						</div>
+						<div class="btn-section">
+							<input type="submit" value="Enviar" class="btn">
+							<input type="reset" value="Limpiar" class="btn">
+							<button class="btn">Salir</button>
+						</div>
+					</form>
+					
+				</div>
+			</div>
+			
 		</section>
 	</body>
 
