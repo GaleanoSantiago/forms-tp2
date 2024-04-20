@@ -22,6 +22,7 @@
 			flex-direction:column;
 			align-items:center;
 		}
+		/* ---------------------------------------- Primer formulario ---------------------------------------- */
 		.first-section{
 			background-color:#51829B;
 		}
@@ -56,7 +57,7 @@
 		}
 		
 		
-		/*Segundo formulario*/
+		/* ---------------------------------------- Segundo formulario ---------------------------------------- */
 		.second-section{
 			background-color: #F6995C;
 		}
@@ -76,15 +77,14 @@
 		}
 		
 		
-		/* Tercer Formulario */
+		/* ---------------------------------------- Tercer Formulario ---------------------------------------- */
 		.titulo-grande-blue{
-			font-style:uppercase;
+			
 			background-color:#51829B;
 			color:white;
-			width:50%;
+			width:1000px;
 			text-align:center;
-			padding:2px 0;
-			font-size:1.6rem;
+			font-size:2rem;
 		}
 		.container{
 			display:flex;
@@ -93,7 +93,7 @@
 			gap:20px;
 		}
 		.container p.subtitle{
-			width:50%;
+			width:1000px;
 		}
 		.container-third-form{
 			display:flex;
@@ -101,13 +101,13 @@
 			align-items:center;
 		}
 		.subForms{
-			width:700px;
+			width:1000px;
 			border:2px solid #51829B;
 			border-radius:10px;
 			padding:15px 10px;
 		}
 		.btn-section{
-			width:700px;
+			width:1000px;
 			display:flex;
 			justify-content:space-around;
 			padding:30px 0;
@@ -116,7 +116,25 @@
 			width: 80px;
 			border-radius:0;
 			border:1px solid #232323;
-			padding:3px 0;
+			padding:5px 0;
+		}
+		.subForm-body{
+			display:flex;
+			flex-wrap:wrap;
+			justify-content:space-around;
+		}
+		.subForm-body .subForm-element{
+			display:flex;
+			gap:5px;
+			margin:15px 0;
+			/*border:1px solid #000;*/
+			height:fit-content;
+		}/*
+		.subForm-body .subForm-element input{
+			width:100px;
+		}*/
+		textarea{
+			padding:15px;
 		}
       </style>
       
@@ -124,9 +142,9 @@
    </head>
 
 	<body>
-		<h1>Formularios</h1>
+		<h1>Trabajo Practico N°2 - Formularios <br> by Galeano Santiago</h1>
 		<section class="first-section">
-			<h2>Formulario 1</h2>
+			<h2 style="margin-bottom:20px;">Formulario 1</h2>
 			<form class="first-form" autocomplete="off">
 				<span>Formulario</span>
 				<div class="mb">
@@ -217,12 +235,103 @@
 					<form>
 						<div class="subForms">
 							<h4>Datos del Paciente:</h4>
+							<div class="subForm-body">
+								<div class="subForm-element">
+									<label for="nombres">** Nombres: </label>
+									<input type="text" name="nombres" required>
+								</div>
+								<div class="subForm-element">
+									<label for="apellido-paterno">** Apellido Paterno: </label>
+									<input type="text" name="apellido-paterno" required>
+								</div>
+								<div class="subForm-element">
+									<label for="apellido-materno">** Apellido Materno: </label>
+									<input type="text" name="apellido-materno" required>
+								</div>
+								<div class="subForm-element">
+									<label for="edad">** Menor de Edad: </label>
+									<input type="radio" name="edad">Si
+									<input type="radio" name="edad">No
+								</div>
+								<div class="subForm-element">
+									<label for="documento">Doc Identidad: </label>
+									<select name="documento">
+										<option value="1">DNI</option>
+										<option value="2">Pasaporte</option>
+									</select>
+								</div>
+								<div class="subForm-element">
+									<label for="numero-documento">Número: </label>
+									<input type="number" name="numero-documento">
+								</div>
+								<div class="subForm-element">
+									<label for="fecha-nac">Fecha de Nacimiento: </label>
+									<input type="date" name="fecha-nac">
+								</div>
+								<div class="subForm-element">
+									<label for="tel-casa">** Telefono de Casa: </label>
+									<input type="number" name="tel-casa" required>
+								</div>
+								<div class="subForm-element">
+									<label for="tel-opcional">Telefono Opcional: </label>
+									<input type="number" name="tel-opcional">
+								</div>
+								<div class="subForm-element">
+									<label for="email">** Correo Electrónico: </label>
+									<input type="email" name="email" required>
+								</div>
+							</div>
 						</div>
 						<p style="text-align:center; margin:5px 0;"><span style="font-weight:bold;">Importante: </span> Sirvase 
 						verificar la dirección de correo electrónico ingresado, para un 
 						correcto envío de su cita.</p>
 						<div class="subForms">
 							<h4>Datos de la Cita:</h4>
+							<div class="subForm-body">
+								<div class="subForm-element">
+									<label for="departamento">** Departamento: </label>
+									<select name="departamento" required>
+										<option value="1">Formosa</option>
+										<option value="2">Laishi</option>
+									</select>
+								</div>
+								<div class="subForm-element">
+									<label for="ctrl-asistencial">** Ctr. Asistencial: </label>
+									<select name="ctrl-asistencial" required>
+										<option value="1">Pami</option>
+										<option value="2">Otro</option>
+									</select>
+								</div>
+								<div class="subForm-element">
+									<label for="especialidad">** Especialidad: </label>
+									<input type="text" name="especialidad" required>
+								</div>
+								<div class="subForm-element" style="flex-direction:column;">
+									<label for="malestar-fisico">** Descripción del Malestar Fisico: </label>
+									<textarea name="malestar-fisico" rows="5" cols="50" required></textarea>
+								</div>
+								<div class="subForm-element" style="flex-direction:column;gap:20px;">
+									
+									<label for="fecha-deseada">** Fecha Deseada (opción en función a cupos medicos disponibles)</label>
+									<div style="display:flex; gap:10px; justify-content:space-around;">
+										<div style="display:flex; gap:5px;">
+											<label for="dia-deseado">Dia: </label>
+											<select name="dia-deseado"required>
+												<option value="1">Cualquier Dia</option>
+												<option value="2">Lunes</option>
+											</select>
+										</div>
+										<div style="display:flex; gap:5px;">
+											<label for="turno-deseado">Turno: </label>
+											<select name="turno-deseado"required>
+												<option value="1">Cualquier Turno</option>
+												<option value="2">Lunes</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								
+							</div>
 						</div>
 						<div class="btn-section">
 							<input type="submit" value="Enviar" class="btn">
